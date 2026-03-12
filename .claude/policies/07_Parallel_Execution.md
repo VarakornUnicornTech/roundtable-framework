@@ -1,4 +1,4 @@
-# §6 — Parallel Execution Policy & Ticket Ownership Rules
+# §7 — Parallel Execution Policy & Ticket Ownership Rules
 
 > **Policy reference file.** Loaded on-demand from `.claude/TeamDocument/1. Policies/`. Core rules live in CLAUDE.md.
 
@@ -15,7 +15,7 @@
 4. **Arcade scaffolds with mock data.** When Arcade's tickets depend on backend data, they build the UI against mock/stub data first and wire live APIs when the dependency signals complete.
 5. **No idle waiting.** If a team exhausts all unblocked tickets while blocked tickets remain, they file an OverseerReport noting the wait state and take up internal prep work (code review, documentation, test expansion) until unblocked.
 6. **Within a team, work in parallel too.** Team members (Conductor, Technologist, Design Scholar, Verification Scholar) divide unblocked tickets among themselves and work concurrently. The Conductor tracks which member owns which ticket and aggregates results.
-7. **Early Phase Advance — Commander ท่านผู้บัญชาการ gate (MANDATORY).** A team that completes all their Phase N tickets may NOT advance to Phase N+1 on their own initiative. They must: (a) file their Phase N OverseerReport marking all tickets complete, (b) enter a wait state and notify AM, and (c) wait for the Commander ท่านผู้บัญชาการ to explicitly tell them they may advance. Only a direct message from the Commander ท่านผู้บัญชาการ authorises the early advance. AM does not have authority to grant this — only the Commander ท่านผู้บัญชาการ does.
+7. **Early Phase Advance — Commander gate (MANDATORY).** A team that completes all their Phase N tickets may NOT advance to Phase N+1 on their own initiative. They must: (a) file their Phase N OverseerReport marking all tickets complete, (b) enter a wait state and notify AM, and (c) wait for Commander to explicitly tell them they may advance. Only a direct message from Commander authorises the early advance. AM does not have authority to grant this — only Commander does.
 
 **Dependency signal format (OverseerReport entry):**
 When a ticket that other teams depend on completes, the completing team's OverseerReport entry MUST include:
@@ -58,4 +58,4 @@ For each team with tickets in Phase N:
 
 ---
 
-*Extracted from CLAUDE.md §6 — 11-03-2026*
+*Adopted from ClaudeTemplate — 11-03-2026. Adapted for RoundTable: AM naming. Added shared-resource priority clarification to Rule §6.*
