@@ -27,7 +27,7 @@ description: Formal team kickoff. Logs session start, reads Phase Briefing, runs
 
 4. **Run ZCB check (AM only — sub-teams skip):**
    - Verify no cross-team dependency blocks exist for this phase's tickets.
-   - Use `/zcb-check [Phase]` or perform inline check against the Briefing.
+   - Perform inline check against the Briefing: confirm no ticket in this phase depends on an incomplete ticket from another team.
 
 5. **Confirm Early Advance status:**
    - If `free`: log `Early Advance AUTHORIZED — team may proceed to Phase [N+1] upon completion without waiting for Commander.`

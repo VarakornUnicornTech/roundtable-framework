@@ -20,7 +20,7 @@
 - **Every prompt → every response = one new session entry appended. No exceptions.**
 - Log entries must include:
   - Timestamp (if applicable)
-  - Team member speaking (use team-specific codes from active Team Roster)
+  - Team member speaking (use team-specific codes from active agent file)
   - Discussion content
   - Decisions made
   - Output to Commander from the prompt execution

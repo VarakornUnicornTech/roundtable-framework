@@ -33,7 +33,7 @@ EXAMPLES:
 
 1. Read `.claude/ProjectEnvironment.md` and locate the `PROJECT_ROOT` for the given ProjectName.
 
-2. Navigate to `[PROJECT_ROOT]/Development/[ProjectName]\05_BugFixesLog\` (Decentralized or pre-existing layout) or `[PROJECT_ROOT]/Development/05_BugFixesLog\` (Centralized, no pre-existing). Check which layout exists.
+2. Navigate to `[PROJECT_ROOT]/Development/[ProjectName]/05_BugFixesLog/` (Decentralized or pre-existing layout) or `[PROJECT_ROOT]/Development/05_BugFixesLog/` (Centralized, no pre-existing). Check which layout exists.
 
 3. Scan the target folder to determine the next ORDER number (count existing entries, add 1).
 
@@ -54,7 +54,7 @@ EXAMPLES:
    └── 4. Arcade/
    ```
 
-7. Present the created file paths to Chief Manager Martin and confirm the plan is ready for ticket population.
+7. Present the created file paths to Commander and confirm the plan is ready for ticket population.
 
 ## Output
-File paths of the created overview file and ticket folder. Ask Chief Manager Martin which teams need tickets written.
+File paths of the created overview file and ticket folder. Ask Commander which teams need tickets written.

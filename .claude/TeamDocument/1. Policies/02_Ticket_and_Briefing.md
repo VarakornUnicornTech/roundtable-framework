@@ -82,7 +82,7 @@ Issued by: AM | Date: DD-MM-YYYY | Project: [Name] | Phase: [N] | Tickets: [list
 
 ## 0. Pre-Work: Load Your Roster
   - Read CLAUDE.md
-  - Read Team Roster file
+  - Read agent file from `.claude/agents/[team].md`
   - Adopt voice, code names, coding style
   - Create today's Team Chat log
 
