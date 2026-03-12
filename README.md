@@ -21,7 +21,38 @@ RoundTable Framework is a `.claude/` configuration template that gives Claude Co
 - **Skills** — Built-in slash commands for common workflows (`/audit`, `/bug-report`, `/team-start`, etc.)
 - **Template management** — Built-in `/template-*` skills for version checking, diffing, updating, and rollback
 
-## Quick Start
+## Install via Claude Code (Recommended)
+
+Copy one of these prompts and paste it directly into Claude Code:
+
+**English:**
+```
+Install the RoundTable Framework from https://github.com/VarakornUnicornTech/unicorn_roundtable_framework_repo into my current project. Follow the Getting Started guide at https://github.com/VarakornUnicornTech/unicorn_roundtable_framework_repo/wiki/Getting-Started
+```
+
+**Thai / ภาษาไทย:**
+```
+ติดตั้ง RoundTable Framework จาก https://github.com/VarakornUnicornTech/unicorn_roundtable_framework_repo ลงใน project ปัจจุบัน ตาม Getting Started ที่ https://github.com/VarakornUnicornTech/unicorn_roundtable_framework_repo/wiki/Getting-Started
+```
+
+> ### ⚠️ Important Tips / ข้อควรระวัง
+>
+> **Use the word "install" — not "read", "explain", or "set up the rules".**
+> If your prompt mentions `.claude rules` or asks Claude to "understand" the framework first, Claude Code will read every policy file inside `.claude/` before starting installation — this makes the process significantly slower.
+>
+> **ใช้คำว่า "ติดตั้ง" (install) — ไม่ใช่ "อ่าน", "อธิบาย", หรือ "ศึกษา rules"**
+> ถ้า prompt ของคุณพูดถึง `.claude rules` หรือขอให้ Claude "เข้าใจ" framework ก่อน Claude Code จะอ่านไฟล์ policy ทุกไฟล์ในโฟลเดอร์ `.claude/` ก่อนเริ่มติดตั้ง — ทำให้กระบวนการช้าลงมาก
+>
+> | Prompt | Speed | Why |
+> |--------|-------|-----|
+> | ✅ *"Install RoundTable Framework from [URL] into my project"* | **Fast** | Claude goes straight to installation |
+> | ✅ *"ติดตั้ง RoundTable Framework จาก [URL] ลงใน project ปัจจุบัน"* | **Fast** | Claude ติดตั้งเลย |
+> | ❌ *"I'm interested in this .claude rule, can you set it up?"* | **Slow** | Claude reads all .claude/ files first |
+> | ❌ *"อยากลองใช้ .claude rule นี้ ช่วย setup ให้หน่อย"* | **Slow** | Claude อ่านไฟล์ทั้งหมดก่อน |
+
+---
+
+## Manual Install (Quick Start)
 
 1. **Clone this repo** into your project:
 

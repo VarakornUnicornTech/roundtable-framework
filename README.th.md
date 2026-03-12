@@ -21,19 +21,64 @@ RoundTable Framework คือ template การตั้งค่า `.claude/
 - **Skills** — Slash command สำเร็จรูปสำหรับ workflow ทั่วไป (`/audit`, `/bug-report`, `/team-start` ฯลฯ)
 - **จัดการ Template** — `/template-*` skills สำหรับตรวจสอบเวอร์ชัน, เปรียบเทียบ, อัปเดต, และย้อนกลับ
 
-## เริ่มต้นใช้งาน
+## ติดตั้งผ่าน Claude Code (แนะนำ)
+
+คัดลอก prompt ด้านล่างแล้ววางลงใน Claude Code ได้เลย:
+
+**ภาษาไทย:**
+```
+ติดตั้ง RoundTable Framework จาก https://github.com/VarakornUnicornTech/unicorn_roundtable_framework_repo ลงใน project ปัจจุบัน ตาม Getting Started ที่ https://github.com/VarakornUnicornTech/unicorn_roundtable_framework_repo/wiki/Getting-Started
+```
+
+**English:**
+```
+Install the RoundTable Framework from https://github.com/VarakornUnicornTech/unicorn_roundtable_framework_repo into my current project. Follow the Getting Started guide at https://github.com/VarakornUnicornTech/unicorn_roundtable_framework_repo/wiki/Getting-Started
+```
+
+> ### ⚠️ ข้อควรระวัง
+>
+> **ใช้คำว่า "ติดตั้ง" (install) — ไม่ใช่ "อ่าน", "อธิบาย", หรือ "ศึกษา rules"**
+>
+> ถ้า prompt ของคุณพูดถึง `.claude rules` หรือขอให้ Claude "เข้าใจ" framework ก่อน Claude Code จะอ่านไฟล์ policy ทุกไฟล์ในโฟลเดอร์ `.claude/` ก่อนเริ่มติดตั้ง — ทำให้กระบวนการช้าลงมาก
+>
+> | Prompt | ความเร็ว | เหตุผล |
+> |--------|----------|--------|
+> | ✅ *"ติดตั้ง RoundTable Framework จาก [URL] ลงใน project ปัจจุบัน"* | **เร็ว** | Claude ติดตั้งเลยทันที |
+> | ✅ *"Install RoundTable Framework from [URL] into my project"* | **เร็ว** | Claude ลงมือทำเลย |
+> | ❌ *"อยากลองใช้ .claude rule นี้ ช่วย setup ให้หน่อย"* | **ช้า** | Claude อ่านไฟล์ทั้งหมดก่อน |
+> | ❌ *"I'm interested in this .claude rule, can you set it up?"* | **ช้า** | Claude reads all .claude/ files first |
+>
+> **เหตุผล:** คำว่า ".claude rule" ทำให้ Claude Code เข้าใจว่าคุณต้องการ *เรียนรู้เนื้อหา* ของ framework ก่อน จึงอ่านไฟล์ policy, team roster, และ skills ทุกไฟล์ก่อนเริ่มติดตั้งจริง ใช้คำว่า "ติดตั้ง" หรือ "install" เพื่อให้ Claude ลงมือทำทันที
+
+---
+
+## ติดตั้งด้วยตัวเอง (Manual Install)
 
 1. **Clone repo นี้** เข้าโปรเจคของคุณ:
+
+   **Bash / Git Bash / macOS / Linux:**
    ```bash
    git clone https://github.com/VarakornUnicornTech/unicorn_roundtable_framework_repo.git .claude-template
    cp -r .claude-template/.claude/ your-project/.claude/
+   rm -rf .claude-template
    ```
 
-2. **แก้ไข `.claude/ProjectEnvironment.md`** — เพิ่มรายละเอียดโปรเจคของคุณ (ชื่อ, โหมด, path)
+   **PowerShell (Windows):**
+   ```powershell
+   git clone https://github.com/VarakornUnicornTech/unicorn_roundtable_framework_repo.git .claude-template
+   Copy-Item -Recurse .claude-template\.claude\ your-project\.claude\
+   Remove-Item -Recurse -Force .claude-template
+   ```
 
-3. **เปิด Claude Code** ในโฟลเดอร์โปรเจค — ระบบจะโหลด CLAUDE.md และใช้โครงสร้างทีมโดยอัตโนมัติ
+   > **หมายเหตุ:** ถ้าติดตั้งผ่าน Claude Code จะรันคำสั่งผ่าน Git Bash อัตโนมัติ — ไม่ต้องกังวลเรื่องความแตกต่างของ OS
 
-4. **เลือกทีม** — Claude จะให้คุณเลือก Team Roster (Overseer, Monolith, Syndicate, Arcade, Cipher หรือ Medica)
+2. **แก้ไข `.claude/ProjectEnvironment.md`** — เพิ่มรายละเอียดโปรเจคของคุณ (ชื่อ, โหมด, path) ดูตัวอย่างและคำอธิบายในไฟล์
+
+3. **ตั้งชื่อผู้มีอำนาจ** — Framework ใช้ "Chief Manager Martin" เป็นชื่อเริ่มต้นของผู้ใช้ (คือตัวคุณ!) หากต้องการเปลี่ยน ให้ find-and-replace `Chief Manager Martin` ด้วยชื่อของคุณใน `.claude/CLAUDE.md`
+
+4. **เปิด Claude Code** ในโฟลเดอร์โปรเจค — ระบบจะโหลด CLAUDE.md และใช้โครงสร้างทีมโดยอัตโนมัติ
+
+5. **เลือกทีม** — Claude จะให้คุณเลือก Team Roster (Overseer, Monolith, Syndicate, Arcade, Cipher หรือ Medica)
 
 ## โครงสร้างโปรเจค
 
