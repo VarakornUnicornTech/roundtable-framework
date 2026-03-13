@@ -1,0 +1,132 @@
+name: PR Validation
+
+on:
+  pull_request:
+    branches: [main, staging, dev]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  validate:
+    name: Validate PR Content
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Validate JSON files
+        run: |
+          echo "Checking template-version.json..."
+          if [ -f template-version.json ]; then
+            python3 -m json.tool template-version.json > /dev/null
+            echo "OK: template-version.json is valid JSON"
+          else
+            echo "SKIP: template-version.json not found"
+          fi
+
+      - name: Check for legacy naming contamination
+        run: |
+          echo "Scanning for legacy names..."
+          FOUND=0
+
+          # Check for old role names that should have been replaced
+          if grep -rn "Chief Manager Martin" .claude/ docs/ *.md 2>/dev/null; then
+            echo "ERROR: Found 'Chief Manager Martin' — should be 'Commander'"
+            FOUND=1
+          fi
+
+          if [ "$FOUND" -eq 1 ]; then
+            echo "::error::Legacy naming contamination detected. See output above."
+            exit 1
+          fi
+
+          echo "OK: No legacy naming contamination found"
+
+      - name: Check for absolute paths
+        run: |
+          echo "Scanning for absolute Windows/Unix paths..."
+          FOUND=0
+
+          # Check for Windows absolute paths (C:\, D:\, etc.)
+          if grep -rn '[A-Z]:\\\\' .claude/ 2>/dev/null | grep -v '.gitignore' | grep -v 'node_modules'; then
+            echo "ERROR: Absolute Windows paths found in .claude/"
+            FOUND=1
+          fi
+
+          if [ "$FOUND" -eq 1 ]; then
+            echo "::error::Absolute paths detected. Use relative paths only."
+            exit 1
+          fi
+
+          echo "OK: No absolute paths found"
+
+      - name: Check for potential secrets
+        run: |
+          echo "Scanning for potential secrets..."
+          FOUND=0
+
+          # Check for common secret patterns
+          if grep -rn "ANTHROPIC_API_KEY\|sk-ant-\|api_key.*=.*['\"]" .claude/ *.md 2>/dev/null; then
+            echo "ERROR: Potential API key or secret found"
+            FOUND=1
+          fi
+
+          if [ "$FOUND" -eq 1 ]; then
+            echo "::error::Potential secrets detected. Never commit API keys or credentials."
+            exit 1
+          fi
+
+          echo "OK: No potential secrets found"
+
+  size-check:
+    name: PR Size Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check PR size
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { data: pr } = await github.rest.pulls.get({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.issue.number,
+            });
+
+            const totalChanges = pr.additions + pr.deletions;
+            let sizeLabel = '';
+            let warning = '';
+
+            if (totalChanges <= 10) sizeLabel = 'size/XS';
+            else if (totalChanges <= 50) sizeLabel = 'size/S';
+            else if (totalChanges <= 200) sizeLabel = 'size/M';
+            else if (totalChanges <= 500) sizeLabel = 'size/L';
+            else {
+              sizeLabel = 'size/XL';
+              warning = `This PR has ${totalChanges} changed lines (${pr.additions} additions, ${pr.deletions} deletions) across ${pr.changed_files} files. Consider splitting into smaller PRs for easier review.`;
+            }
+
+            // Add size label
+            try {
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                labels: [sizeLabel],
+              });
+            } catch (e) {
+              console.log(`Could not add label ${sizeLabel}: ${e.message}`);
+            }
+
+            // Post warning for XL PRs
+            if (warning) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: `**PR Size Warning:** ${warning}`,
+              });
+            }
+
+            console.log(`PR size: +${pr.additions}/-${pr.deletions} (${totalChanges} total) -> ${sizeLabel}`);

@@ -1,0 +1,55 @@
+# RoundTable Framework — Code Ownership
+# https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+#
+# When a PR touches files matching these patterns, the listed owners
+# are automatically requested for review. This enforces the protection
+# tiers defined in GOVERNANCE.md and docs/REVIEW_PROCESS.md.
+#
+# IMPORTANT: CODEOWNERS uses the LAST matching pattern, not the first.
+# More specific patterns must come AFTER general ones.
+
+# ============================================================
+# TIER 1: Owner-Only Zone (Commander review required)
+# Core framework identity and configuration
+# ============================================================
+
+/.claude/CLAUDE.md                      @VarakornUnicornTech
+/.claude/agents/                        @VarakornUnicornTech
+/.claude/settings.json                  @VarakornUnicornTech
+/template-version.json                  @VarakornUnicornTech
+/LICENSE                                @VarakornUnicornTech
+
+# Governance and security documents
+/GOVERNANCE.md                          @VarakornUnicornTech
+/SECURITY.md                            @VarakornUnicornTech
+/MAINTAINERS.md                         @VarakornUnicornTech
+
+# CI/CD pipelines and repo config
+/.github/workflows/                     @VarakornUnicornTech
+/.github/CODEOWNERS                     @VarakornUnicornTech
+
+# ============================================================
+# TIER 2: Maintainer Zone (Maintainer review required)
+# Policies, skills, and primary documentation
+# ============================================================
+
+/.claude/policies/                      @VarakornUnicornTech @xMartin14091x
+/.claude/TeamDocument/                  @VarakornUnicornTech @xMartin14091x
+/.claude/skills/                        @VarakornUnicornTech @xMartin14091x
+/CHANGELOG.md                           @VarakornUnicornTech @xMartin14091x
+
+# Documentation (open for community PRs, but maintainer must review)
+/README.md                              @VarakornUnicornTech @xMartin14091x
+/README.th.md                           @VarakornUnicornTech @xMartin14091x
+/CONTRIBUTING.md                        @VarakornUnicornTech @xMartin14091x
+/CONTRIBUTING.th.md                     @VarakornUnicornTech @xMartin14091x
+/GETTING_STARTED.md                     @VarakornUnicornTech @xMartin14091x
+/GETTING_STARTED_TH.md                  @VarakornUnicornTech @xMartin14091x
+/docs/                                  @VarakornUnicornTech @xMartin14091x
+
+# ============================================================
+# TIER 3: Community Zone (no CODEOWNERS restriction)
+# Issue templates, examples, translations
+# Files not listed here are open for community contribution
+# with standard PR review from any maintainer.
+# ============================================================
