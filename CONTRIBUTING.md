@@ -44,13 +44,39 @@ Documentation improvements are highly valued. Both English and Thai translations
 
 ### Fork & Clone
 
+We use the **Fork & Pull model** — the open source standard used by React, Kubernetes, VS Code, and most major projects. This means:
+
+- You **fork** the repository to your own GitHub account
+- You work on your fork (no write access to the main repo needed)
+- You submit Pull Requests from your fork to our `dev` branch
+- **Contributors do NOT have branches on the main repo** — all work stays on your fork
+
 ```bash
-# Fork the repository on GitHub, then:
+# 1. Fork the repository on GitHub (click the "Fork" button), then:
 git clone https://github.com/YOUR_USERNAME/roundtable-framework.git
 cd roundtable-framework
+
+# 2. Add upstream remote (one-time setup)
 git remote add upstream https://github.com/VarakornUnicornTech/roundtable-framework.git
 git fetch upstream
 ```
+
+### Keeping Your Fork in Sync (IMPORTANT)
+
+**Before every PR**, sync your fork with the latest upstream `dev` to avoid conflicts and ensure CI workflows run correctly:
+
+```bash
+# Fetch latest changes from upstream
+git fetch upstream
+
+# Rebase your work onto upstream/dev
+git rebase upstream/dev
+
+# Push updated branch to your fork
+git push origin your-branch-name
+```
+
+> **Why is this critical?** If your fork is behind upstream, CI security checks may not trigger on your PR — and your PR may have merge conflicts. Always sync before submitting.
 
 ### Branch Naming Convention
 
@@ -66,11 +92,13 @@ Create branches from `dev` using these prefixes:
 
 ## Pull Request Process
 
-### 1. Fork & Branch from `dev`
+### 1. Sync Fork & Branch from `dev`
 
 ```bash
+# On your fork — sync with upstream first
+git fetch upstream
 git checkout dev
-git pull upstream dev
+git rebase upstream/dev
 git checkout -b feature/your-feature-name
 ```
 
