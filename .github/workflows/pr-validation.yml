@@ -50,7 +50,7 @@ jobs:
           fi
           # Check for old repo name (exclude this workflow file to avoid self-match)
           if grep -rn "unicorn_roundtable_framework_repo" .claude/ docs/ *.md *.json .github/ 2>/dev/null | grep -v 'pr-validation.yml'; then
-            echo "ERROR: Found old repo name 'unicorn_roundtable_framework_repo' — should be 'roundtable-framework'"
+            echo "ERROR: Found old repo name 'unicorn_roundtable_framework_repo' — should be 'UniOpsQC'"
             FOUND=1
           fi
           if [ "$FOUND" -eq 1 ]; then

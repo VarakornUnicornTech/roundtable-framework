@@ -1,8 +1,8 @@
 blank_issues_enabled: false
 contact_links:
   - name: Questions and Discussion
-    url: https://github.com/VarakornUnicornTech/roundtable-framework/discussions
+    url: https://github.com/VarakornUnicornTech/UniOpsQC/discussions
     about: Ask questions and discuss ideas in GitHub Discussions instead of opening an issue.
   - name: Security Vulnerability (Private Report)
-    url: https://github.com/VarakornUnicornTech/roundtable-framework/security/advisories/new
+    url: https://github.com/VarakornUnicornTech/UniOpsQC/security/advisories/new
     about: Report security vulnerabilities privately. DO NOT open a public issue for security concerns.

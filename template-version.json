@@ -1,7 +1,7 @@
 {
-  "name": "roundtable-framework",
+  "name": "UniOpsQC",
   "version": "2.0.0",
-  "description": "RoundTable Framework for Claude Code \u2014 Multi-team AI governance with plugin support",
+  "description": "UniOpsQC (RoundTable Engine) \u2014 Multi-team AI governance framework for Claude Code",
   "author": "Unicorn",
   "license": "MIT",
   "released": "2026-03-14",
