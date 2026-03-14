@@ -27,12 +27,12 @@ Copy one of these prompts and paste it directly into Claude Code:
 
 **English:**
 ```
-Install the RoundTable Framework from https://github.com/VarakornUnicornTech/unicorn_roundtable_framework_repo into my current project. Follow the Getting Started guide at https://github.com/VarakornUnicornTech/unicorn_roundtable_framework_repo/wiki/Getting-Started
+Install the RoundTable Framework from https://github.com/VarakornUnicornTech/roundtable-framework into my current project. Follow the Getting Started guide at https://github.com/VarakornUnicornTech/roundtable-framework/wiki/Getting-Started
 ```
 
 **Thai / ภาษาไทย:**
 ```
-ติดตั้ง RoundTable Framework จาก https://github.com/VarakornUnicornTech/unicorn_roundtable_framework_repo ลงใน project ปัจจุบัน ตาม Getting Started ที่ https://github.com/VarakornUnicornTech/unicorn_roundtable_framework_repo/wiki/Getting-Started
+ติดตั้ง RoundTable Framework จาก https://github.com/VarakornUnicornTech/roundtable-framework ลงใน project ปัจจุบัน ตาม Getting Started ที่ https://github.com/VarakornUnicornTech/roundtable-framework/wiki/Getting-Started
 ```
 
 > ### ⚠️ Important Tips / ข้อควรระวัง
@@ -58,14 +58,14 @@ Install the RoundTable Framework from https://github.com/VarakornUnicornTech/uni
 
    **Bash / Git Bash / macOS / Linux:**
    ```bash
-   git clone https://github.com/VarakornUnicornTech/unicorn_roundtable_framework_repo.git .claude-template
+   git clone https://github.com/VarakornUnicornTech/roundtable-framework.git .claude-template
    cp -r .claude-template/.claude/ your-project/.claude/
    rm -rf .claude-template
    ```
 
    **PowerShell (Windows):**
    ```powershell
-   git clone https://github.com/VarakornUnicornTech/unicorn_roundtable_framework_repo.git .claude-template
+   git clone https://github.com/VarakornUnicornTech/roundtable-framework.git .claude-template
    Copy-Item -Recurse .claude-template\.claude\ your-project\.claude\
    Remove-Item -Recurse -Force .claude-template
    ```

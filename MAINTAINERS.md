@@ -52,7 +52,7 @@ Maintainers who step down or become inactive are moved here with gratitude for t
 
 ## Contact
 
-For maintainer-related questions, reach out via [GitHub Discussions](https://github.com/VarakornUnicornTech/unicorn_roundtable_framework_repo/discussions) or tag a maintainer in a relevant issue/PR.
+For maintainer-related questions, reach out via [GitHub Discussions](https://github.com/VarakornUnicornTech/roundtable-framework/discussions) or tag a maintainer in a relevant issue/PR.
 
 ---
 

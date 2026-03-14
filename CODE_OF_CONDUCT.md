@@ -49,7 +49,7 @@ Instances of unacceptable behavior may be reported to the project maintainers at
 ## Contact
 
 - **Project Owner:** [@VarakornUnicornTech](https://github.com/VarakornUnicornTech)
-- **Report via:** [GitHub Security Advisories](https://github.com/VarakornUnicornTech/unicorn_roundtable_framework_repo/security/advisories) (for private reports)
+- **Report via:** [GitHub Security Advisories](https://github.com/VarakornUnicornTech/roundtable-framework/security/advisories) (for private reports)
 
 ## Attribution
 

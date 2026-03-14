@@ -158,7 +158,7 @@ your-project/
 
 - **Framework docs:** Check `.claude/policies/` for detailed standards
 - **Team details:** Read `.claude/Team Roster/` for each team's capabilities
-- **Issues:** [Report on GitHub](https://github.com/VarakornUnicornTech/unicorn_roundtable_framework_repo/issues)
+- **Issues:** [Report on GitHub](https://github.com/VarakornUnicornTech/roundtable-framework/issues)
 
 ---
 
