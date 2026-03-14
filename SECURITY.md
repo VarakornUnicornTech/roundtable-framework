@@ -13,7 +13,7 @@
 
 ### How to Report
 
-1. **Preferred:** Use [GitHub Security Advisories](https://github.com/VarakornUnicornTech/roundtable-framework/security/advisories/new) to report privately
+1. **Preferred:** Use [GitHub Security Advisories](https://github.com/VarakornUnicornTech/UniOpsQC/security/advisories/new) to report privately
 2. **Alternative:** Contact the project owner directly via GitHub at [@VarakornUnicornTech](https://github.com/VarakornUnicornTech)
 
 ### What to Include

@@ -3,11 +3,11 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/VarakornUnicornTech/roundtable-framework/releases"><img src="https://img.shields.io/badge/version-2.0.0-0d6efd?style=flat-square" alt="Version"></a>
-  <img src="https://img.shields.io/github/license/VarakornUnicornTech/roundtable-framework?style=flat-square" alt="License">
-  <img src="https://img.shields.io/github/stars/VarakornUnicornTech/roundtable-framework?style=flat-square&color=f0a500" alt="Stars">
-  <img src="https://img.shields.io/github/forks/VarakornUnicornTech/roundtable-framework?style=flat-square" alt="Forks">
-  <img src="https://img.shields.io/github/last-commit/VarakornUnicornTech/roundtable-framework?style=flat-square" alt="Last Commit">
+  <a href="https://github.com/VarakornUnicornTech/UniOpsQC/releases"><img src="https://img.shields.io/badge/version-2.0.0-0d6efd?style=flat-square" alt="Version"></a>
+  <img src="https://img.shields.io/github/license/VarakornUnicornTech/UniOpsQC?style=flat-square" alt="License">
+  <img src="https://img.shields.io/github/stars/VarakornUnicornTech/UniOpsQC?style=flat-square&color=f0a500" alt="Stars">
+  <img src="https://img.shields.io/github/forks/VarakornUnicornTech/UniOpsQC?style=flat-square" alt="Forks">
+  <img src="https://img.shields.io/github/last-commit/VarakornUnicornTech/UniOpsQC?style=flat-square" alt="Last Commit">
   <img src="https://img.shields.io/badge/Claude%20Code-compatible-7c3aed?style=flat-square" alt="Claude Code compatible">
   <img src="https://img.shields.io/badge/made%20in-Thailand%20🇹🇭-e63946?style=flat-square" alt="Made in Thailand">
 </p>
@@ -76,12 +76,12 @@ Copy and paste into Claude Code:
 
 **🇬🇧 English:**
 ```
-Install UniOps Quantum Cycle from https://github.com/VarakornUnicornTech/roundtable-framework into my current project. Follow the Getting Started guide at https://github.com/VarakornUnicornTech/roundtable-framework/wiki/Getting-Started
+Install UniOps Quantum Cycle from https://github.com/VarakornUnicornTech/UniOpsQC into my current project. Follow the Getting Started guide at https://github.com/VarakornUnicornTech/UniOpsQC/wiki/Getting-Started
 ```
 
 **🇹🇭 Thai / ภาษาไทย:**
 ```
-ติดตั้ง UniOps Quantum Cycle จาก https://github.com/VarakornUnicornTech/roundtable-framework ลงใน project ปัจจุบัน ตาม Getting Started ที่ https://github.com/VarakornUnicornTech/roundtable-framework/wiki/Getting-Started
+ติดตั้ง UniOps Quantum Cycle จาก https://github.com/VarakornUnicornTech/UniOpsQC ลงใน project ปัจจุบัน ตาม Getting Started ที่ https://github.com/VarakornUnicornTech/UniOpsQC/wiki/Getting-Started
 ```
 
 > [!TIP]
@@ -91,7 +91,7 @@ Install UniOps Quantum Cycle from https://github.com/VarakornUnicornTech/roundta
 
 **Bash / Git Bash / macOS / Linux:**
 ```bash
-git clone https://github.com/VarakornUnicornTech/roundtable-framework.git .claude-template
+git clone https://github.com/VarakornUnicornTech/UniOpsQC.git .claude-template
 cp -r .claude-template/.claude/ your-project/.claude/
 cp .claude-template/plugin.json your-project/plugin.json
 cp .claude-template/.mcp.json your-project/.mcp.json
@@ -101,7 +101,7 @@ rm -rf .claude-template
 
 **PowerShell (Windows):**
 ```powershell
-git clone https://github.com/VarakornUnicornTech/roundtable-framework.git .claude-template
+git clone https://github.com/VarakornUnicornTech/UniOpsQC.git .claude-template
 Copy-Item -Recurse .claude-template\.claude\ your-project\.claude\
 Copy-Item .claude-template\plugin.json your-project\plugin.json
 Copy-Item .claude-template\.mcp.json your-project\.mcp.json

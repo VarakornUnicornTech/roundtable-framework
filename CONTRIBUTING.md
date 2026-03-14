@@ -14,14 +14,14 @@ By participating in this project, you agree to uphold our [Code of Conduct](CODE
 
 ### Reporting Bugs
 
-- Use the [Bug Report](https://github.com/VarakornUnicornTech/roundtable-framework/issues/new?template=bug_report.md) issue template
+- Use the [Bug Report](https://github.com/VarakornUnicornTech/UniOpsQC/issues/new?template=bug_report.md) issue template
 - Include your Claude Code version and OS
 - Provide steps to reproduce the issue
 - Include relevant log output if available
 
 ### Suggesting Features
 
-- Use the [Feature Request](https://github.com/VarakornUnicornTech/roundtable-framework/issues/new?template=feature_request.md) issue template
+- Use the [Feature Request](https://github.com/VarakornUnicornTech/UniOpsQC/issues/new?template=feature_request.md) issue template
 - Describe the problem your feature would solve
 - Explain your proposed solution
 - Consider alternative approaches
@@ -53,11 +53,11 @@ We use the **Fork & Pull model** — the open source standard used by React, Kub
 
 ```bash
 # 1. Fork the repository on GitHub (click the "Fork" button), then:
-git clone https://github.com/YOUR_USERNAME/roundtable-framework.git
-cd roundtable-framework
+git clone https://github.com/YOUR_USERNAME/UniOpsQC.git
+cd UniOpsQC
 
 # 2. Add upstream remote (one-time setup)
-git remote add upstream https://github.com/VarakornUnicornTech/roundtable-framework.git
+git remote add upstream https://github.com/VarakornUnicornTech/UniOpsQC.git
 git fetch upstream
 ```
 
@@ -239,9 +239,9 @@ RoundTable Framework welcomes contributions from AI agents. See [docs/AI_AGENTS.
 
 ## Community
 
-- **Questions:** Use [GitHub Discussions](https://github.com/VarakornUnicornTech/roundtable-framework/discussions)
-- **Bugs:** Use [Issues](https://github.com/VarakornUnicornTech/roundtable-framework/issues) with the Bug Report template
-- **Features:** Use [Issues](https://github.com/VarakornUnicornTech/roundtable-framework/issues) with the Feature Request template
+- **Questions:** Use [GitHub Discussions](https://github.com/VarakornUnicornTech/UniOpsQC/discussions)
+- **Bugs:** Use [Issues](https://github.com/VarakornUnicornTech/UniOpsQC/issues) with the Bug Report template
+- **Features:** Use [Issues](https://github.com/VarakornUnicornTech/UniOpsQC/issues) with the Feature Request template
 - **Security:** See [SECURITY.md](SECURITY.md) — **never** open a public issue for vulnerabilities
 
 ## License

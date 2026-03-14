@@ -103,7 +103,7 @@ As AI agents become more capable, we anticipate:
 - AI-assisted translation for bilingual documentation
 - Collaborative human-AI pull requests as a standard workflow
 
-We'll update this document as these capabilities mature. Community input on AI integration is welcome in [GitHub Discussions](https://github.com/VarakornUnicornTech/roundtable-framework/discussions).
+We'll update this document as these capabilities mature. Community input on AI integration is welcome in [GitHub Discussions](https://github.com/VarakornUnicornTech/UniOpsQC/discussions).
 
 ---
 

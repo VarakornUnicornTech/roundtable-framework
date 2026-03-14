@@ -86,7 +86,7 @@ No hash computation. No remote fetch. This must be fast.
    - If missing: "No template-version.json found — cannot determine current version."
 
 2. Fetch remote `template-version.json`:
-   `https://raw.githubusercontent.com/VarakornUnicornTech/roundtable-framework/main/template-version.json`
+   `https://raw.githubusercontent.com/VarakornUnicornTech/UniOpsQC/main/template-version.json`
    - If fetch fails: "Could not reach remote repository."
 
 3. Compare versions (semantic versioning):
@@ -375,7 +375,7 @@ Clean up `.claude/.merge-preview/` directory after successful apply.
 ## Notes
 
 - **SHA-256 computation:** `sha256sum "<absolute-path>"` — extract first 64 hex characters.
-- **Remote URL pattern:** `https://raw.githubusercontent.com/VarakornUnicornTech/roundtable-framework/main/<path>` (spaces → `%20`).
+- **Remote URL pattern:** `https://raw.githubusercontent.com/VarakornUnicornTech/UniOpsQC/main/<path>` (spaces → `%20`).
 - **Never track:** `RoundTable/` logs, `team_chat/`, `ProjectEnvironment.md`, `CHANGELOG.md`.
 - **Backup location:** `.claude/.backups/` — versioned directories with manifest.
 - **Merge preview location:** `.claude/.merge-preview/` — temporary, cleaned up after apply.

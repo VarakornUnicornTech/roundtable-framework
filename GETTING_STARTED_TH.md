@@ -158,7 +158,7 @@ your-project/
 
 - **เอกสารเพิ่มเติม:** ดู `.claude/policies/` สำหรับมาตรฐานโดยละเอียด
 - **รายละเอียดทีม:** อ่าน `.claude/Team Roster/` สำหรับความสามารถแต่ละทีม
-- **รายงานปัญหา:** [เปิด Issue บน GitHub](https://github.com/VarakornUnicornTech/roundtable-framework/issues)
+- **รายงานปัญหา:** [เปิด Issue บน GitHub](https://github.com/VarakornUnicornTech/UniOpsQC/issues)
 
 ---
 
