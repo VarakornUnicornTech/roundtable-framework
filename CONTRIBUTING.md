@@ -14,14 +14,14 @@ By participating in this project, you agree to uphold our [Code of Conduct](CODE
 
 ### Reporting Bugs
 
-- Use the [Bug Report](https://github.com/VarakornUnicornTech/unicorn_roundtable_framework_repo/issues/new?template=bug_report.md) issue template
+- Use the [Bug Report](https://github.com/VarakornUnicornTech/roundtable-framework/issues/new?template=bug_report.md) issue template
 - Include your Claude Code version and OS
 - Provide steps to reproduce the issue
 - Include relevant log output if available
 
 ### Suggesting Features
 
-- Use the [Feature Request](https://github.com/VarakornUnicornTech/unicorn_roundtable_framework_repo/issues/new?template=feature_request.md) issue template
+- Use the [Feature Request](https://github.com/VarakornUnicornTech/roundtable-framework/issues/new?template=feature_request.md) issue template
 - Describe the problem your feature would solve
 - Explain your proposed solution
 - Consider alternative approaches
@@ -46,9 +46,9 @@ Documentation improvements are highly valued. Both English and Thai translations
 
 ```bash
 # Fork the repository on GitHub, then:
-git clone https://github.com/YOUR_USERNAME/unicorn_roundtable_framework_repo.git
-cd unicorn_roundtable_framework_repo
-git remote add upstream https://github.com/VarakornUnicornTech/unicorn_roundtable_framework_repo.git
+git clone https://github.com/YOUR_USERNAME/roundtable-framework.git
+cd roundtable-framework
+git remote add upstream https://github.com/VarakornUnicornTech/roundtable-framework.git
 git fetch upstream
 ```
 
@@ -211,9 +211,9 @@ RoundTable Framework welcomes contributions from AI agents. See [docs/AI_AGENTS.
 
 ## Community
 
-- **Questions:** Use [GitHub Discussions](https://github.com/VarakornUnicornTech/unicorn_roundtable_framework_repo/discussions)
-- **Bugs:** Use [Issues](https://github.com/VarakornUnicornTech/unicorn_roundtable_framework_repo/issues) with the Bug Report template
-- **Features:** Use [Issues](https://github.com/VarakornUnicornTech/unicorn_roundtable_framework_repo/issues) with the Feature Request template
+- **Questions:** Use [GitHub Discussions](https://github.com/VarakornUnicornTech/roundtable-framework/discussions)
+- **Bugs:** Use [Issues](https://github.com/VarakornUnicornTech/roundtable-framework/issues) with the Bug Report template
+- **Features:** Use [Issues](https://github.com/VarakornUnicornTech/roundtable-framework/issues) with the Feature Request template
 - **Security:** See [SECURITY.md](SECURITY.md) — **never** open a public issue for vulnerabilities
 
 ## License

@@ -87,7 +87,7 @@ Parse `$ARGUMENTS`. The first word is the action (default `status` if empty). Ro
    - If missing: "No template-version.json found — cannot determine current version."
 
 2. Fetch remote `template-version.json`:
-   `https://raw.githubusercontent.com/VarakornUnicornTech/unicorn_roundtable_framework_repo/main/template-version.json`
+   `https://raw.githubusercontent.com/VarakornUnicornTech/roundtable-framework/main/template-version.json`
    - If fetch fails: "Could not reach remote repository."
 
 3. Compare versions (semantic versioning):
@@ -141,7 +141,7 @@ Performs a 3-way comparison: **local file** vs **base hash** (stored at install 
 3. For each file in `file_hashes`:
    a. Compute local SHA-256 via Bash: `sha256sum "<project-root>/<file-path>"` → extract hex.
    b. Fetch remote file from:
-      `https://raw.githubusercontent.com/VarakornUnicornTech/unicorn_roundtable_framework_repo/main/<url-encoded-path>`
+      `https://raw.githubusercontent.com/VarakornUnicornTech/roundtable-framework/main/<url-encoded-path>`
       URL-encode spaces as `%20`.
       If remote fetch fails: mark as REMOTE MISSING.
    c. Compute remote SHA-256: `printf '%s' "$remote_content" | sha256sum` → extract hex.
@@ -250,6 +250,6 @@ All .backup files saved. Run `/template rollback` to undo.
 ## Notes
 
 - **SHA-256 computation:** `sha256sum "<absolute-path>"` — extract first 64 hex characters.
-- **Remote URL pattern:** `https://raw.githubusercontent.com/VarakornUnicornTech/unicorn_roundtable_framework_repo/main/<path>` (spaces → `%20`).
+- **Remote URL pattern:** `https://raw.githubusercontent.com/VarakornUnicornTech/roundtable-framework/main/<path>` (spaces → `%20`).
 - **Never track:** `RoundTable/` logs, `TeamDocument/2. TeamChat/`, `ProjectEnvironment.md`, `CHANGELOG.md`.
 - **This skill ships with the framework** — consumers use it to pull future upstream updates safely.

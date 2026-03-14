@@ -1,7 +1,7 @@
 # Upstream PR Process — Reference Guide
 
-**Upstream repo:** `VarakornUnicornTech/unicorn_roundtable_framework_repo`
-**Our fork:** `xMartin14091x/unicorn_roundtable_framework_repo`
+**Upstream repo:** `VarakornUnicornTech/roundtable-framework`
+**Our fork:** `xMartin14091x/roundtable-framework`
 
 ---
 
