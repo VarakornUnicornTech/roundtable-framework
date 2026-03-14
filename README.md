@@ -129,7 +129,12 @@ Each level is opt-in. Use only what you need.
 ### Framework Management
 | Command | Purpose |
 |---------|---------|
-| `/template [action]` | Version check, diff, update, rollback |
+| `/template version` | Quick check — your installed version + component count |
+| `/template check update` | Compare local vs latest remote version, warn if outdated |
+| `/template preview` | Upgrade impact analysis — benefits, risks, and recommendation |
+| `/template changelog [version?]` | View changelog, optionally filtered by version |
+| `/template apply` | Upgrade with auto-backup + AI Smart Merge for conflicts |
+| `/template rollback [version?]` | Restore any previous version from versioned backups |
 
 ## Rules (Path-Scoped)
 
