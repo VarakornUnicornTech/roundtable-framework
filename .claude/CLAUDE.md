@@ -154,6 +154,8 @@ Key rules: Sub-teams log in `TeamDocument/2. TeamChat/`, not RoundTable. Oversee
 2. Wait for explicit Commander confirmation before implementing
 3. Never implement without approval — no matter how simple the task appears
 
+**No-Code-Before-Ticket Rule (13-03-2026):** No code change — not a single line — until its ticket exists in the Development folder. Applies to ALL scenarios: live-discovered bugs, approved features, quick fixes, urgent issues. No exceptions. Conductor must halt implementation and create the ticket first. Violations logged in RoundTable with root cause.
+
 **ProjectEnvironment.md** declares the active mode, project root paths, and source code locations for every project. Location: `.claude/ProjectEnvironment.md`. Check this file before constructing any Development folder path.
 
 Two project modes:
@@ -219,8 +221,9 @@ All three sub-teams (Monolith, Syndicate, Arcade) work in parallel across every 
 | §6 | Debugging Protocol, Instrument-First Rule, INDEV Persistent Probes, Cross-Layer Trace, Rewrite Threshold, Gap Bug Detection | `TeamDocument/1. Policies/06_Debugging_Protocol.md` |
 | §7 | Parallel Execution, ZCB Guarantee, Ticket Ownership, Commander Sync Gate | `TeamDocument/1. Policies/07_Parallel_Execution.md` |
 | §8 | Skills (slash commands), Subagent standard, Trigger Conditions, Pre-Flight Declaration | `TeamDocument/1. Policies/08_Skills_and_Subagents.md` |
+| §9 | Multi-Session Parallel Work, one-session-per-project, project-prefixed logging | `TeamDocument/1. Policies/09_Multi_Session_Parallel_Work.md` |
 
-> **Loading rule:** Policy files are read on-demand. Teams do NOT need to read all 8 at session start — CLAUDE.md is sufficient for initialization. Read the specific policy when needed.
+> **Loading rule:** Policy files are read on-demand. Teams do NOT need to read all 9 at session start — CLAUDE.md is sufficient for initialization. Read the specific policy when needed.
 
 ---
 
@@ -239,6 +242,9 @@ Skills are prompt templates in `.claude/skills/` invoked with `/command-name`. S
 | `/mod-log [Project] [name]` | Create PLANNED modification log + ticket folders |
 | `/sub-feature [Project] [name]` | Create PLANNED sub-feature + ticket folders |
 | `/overseer-report [ID]` | File a report entry for AM review |
+| `/git commit [branch?]` | Governed commit — rebase, 2-pass review, ticket gate, commit |
+| `/git pr [branch?]` | Governed pull request — rebase, review, test, PR with governance gates |
+| `/git lookback [period?]` | Retrospective — rebase-aware git + RoundTable session metrics |
 | `/template [action]` | Framework management — `status` · `changelog` · `check` · `diff` · `apply` · `rollback` |
 | `/Overseer` `/Monolith` `/Syndicate` `/Arcade` `/Cipher` | Persona switch |
 
@@ -284,16 +290,37 @@ Each team has a dedicated agent definition in `.claude/agents/`.
 
 ---
 
+## Rules (Path-Scoped Enforcement)
+
+Policy rules in `.claude/rules/` — loaded automatically based on file context. These complement the full policy files in `TeamDocument/1. Policies/`.
+
+| Rule File | Scope | What It Enforces |
+|-----------|-------|-----------------|
+| `governance.md` | All files | §2+§4: Plan-before-code, no-code-before-ticket, ticket standards, briefing format, phase gates, UX smoke test, silent failure rule |
+| `logging.md` | All files | §1+§3: Session logging, RoundTable format/rotation, all-voices rule, OverseerReport, TeamChat, HandOver standard |
+| `debugging.md` | `*.ts, *.js, *.py, *.go, *.rs, *.java` | §6: Instrument-first, probe standards, cross-layer trace, gap bug detection, side-effect scan, rewrite threshold |
+| `testing.md` | `*.test.*, *.spec.*, tests/, test/` | Unit/integration tests, regression gates, living docs, quality standards |
+| `codebase-scanning.md` | All files | §5: L1/L2/L3 tiered scan protocol, PreExisting TechStack format, 5 completeness checks |
+| `parallel-execution.md` | All files | §7+§9: ZCB guarantee, ticket ownership, COO sync gate, multi-session rules |
+| `skills-and-subagents.md` | All files | §8: Skill format, AM orchestration modes, subagent triggers, pre-flight declarations |
+
 ## Hooks (Automated Enforcement)
 
 | Hook Event | What It Does |
 |-----------|-------------|
-| `PreToolUse` (Edit/Write) | **Blocks edits** to protected files unless Commander has explicitly authorized policy modifications |
+| `SessionStart` | Confirms RoundTable governance framework is active |
+| `PreToolUse` (Edit/Write) | Checks for active ticket before allowing code edits (No-Code-Before-Ticket) |
+| `PostToolUse` (Edit/Write) | Logs file changes to session audit trail |
 
-> **Protected files:** `.claude/CLAUDE.md`, `.claude/TeamDocument/1. Policies/*`, `.claude/agents/*`
-> **Configuration:** `.claude/settings.json`
-> **Override:** Commander must explicitly authorize policy file edits in the session
+> **Configuration:** `.claude/settings.json` (hooks section) + `hooks/scripts/`
+> **Protected files:** `.claude/CLAUDE.md`, `.claude/TeamDocument/1. Policies/*`, `.claude/agents/*` (prompt hook in `settings.json`)
+> **Note:** Hooks MUST be defined in `.claude/settings.json` under the `"hooks"` key. Claude Code does NOT read `hooks/hooks.json`.
+
+## Playwright MCP (Browser Automation)
+
+Verification Scholars can use Playwright for UX Smoke Test Gates and User Journey Walkthroughs.
+Configuration: `.mcp.json` at project root. Tools: `goto`, `click`, `fill`, `screenshot`, `snapshot`.
 
 ---
 
-*Last updated: 13-03-2026*
+*Last updated: 14-03-2026*
