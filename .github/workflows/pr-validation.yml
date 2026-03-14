@@ -48,8 +48,8 @@ jobs:
             echo "ERROR: Found 'Chief Manager Martin' — should be 'Commander'"
             FOUND=1
           fi
-          # Check for old repo name
-          if grep -rn "unicorn_roundtable_framework_repo" .claude/ docs/ *.md *.json .github/ 2>/dev/null; then
+          # Check for old repo name (exclude this workflow file to avoid self-match)
+          if grep -rn "unicorn_roundtable_framework_repo" .claude/ docs/ *.md *.json .github/ 2>/dev/null | grep -v 'pr-validation.yml'; then
             echo "ERROR: Found old repo name 'unicorn_roundtable_framework_repo' — should be 'roundtable-framework'"
             FOUND=1
           fi
@@ -220,7 +220,7 @@ jobs:
           FOUND=0
 
           # Allowed domains
-          ALLOWED_DOMAINS="github\.com|raw\.githubusercontent\.com|docs\.anthropic\.com|anthropic\.com|unicorntechint\.com|marketplace\.visualstudio\.com|docs\.github\.com|keepachangelog\.com|semver\.org|creativecommons\.org|dotnet\.microsoft\.com|nodejs\.org|docker\.com"
+          ALLOWED_DOMAINS="github\.com|raw\.githubusercontent\.com|docs\.anthropic\.com|anthropic\.com|unicorntechint\.com|marketplace\.visualstudio\.com|docs\.github\.com|keepachangelog\.com|semver\.org|creativecommons\.org|dotnet\.microsoft\.com|nodejs\.org|docker\.com|contributor-covenant\.org|conventionalcommits\.org"
 
           # Extract all URLs from all files
           URLS=$(grep -roEh 'https?://[a-zA-Z0-9./?=_&%-]+' .claude/ docs/ *.md *.json .github/ hooks/ 2>/dev/null | sort -u || true)

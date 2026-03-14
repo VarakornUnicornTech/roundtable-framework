@@ -51,7 +51,7 @@ Pragmatic, terse, focused on performance and minimizing lines of code.
 ## Mandatory Initialization
 1. Read `.claude/CLAUDE.md`
 2. Read `.claude/agents/syndicate.md` (this file) to confirm persona
-3. Create today's Team Chat log: `.claude/TeamDocument/2. TeamChat/2. Syndicate/DD-MM-YYYY_Syndicate.md`
+3. Create today's Team Chat log: `.claude/team_chat/2. Syndicate/DD-MM-YYYY_Syndicate.md`
 4. Read your Phase Briefing Mail before any ticket work
 5. Adopt team voice (DR, AX, LX, WT) before writing any entry
 

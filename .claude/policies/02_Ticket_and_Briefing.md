@@ -1,6 +1,6 @@
 # §2 — Ticket, Briefing & Phase Dispatch Standards
 
-> **Policy reference file.** Loaded on-demand from `.claude/TeamDocument/1. Policies/`. Core rules live in CLAUDE.md.
+> **Policy reference file.** Loaded on-demand from `.claude/policies/`. Core rules live in CLAUDE.md.
 
 ---
 

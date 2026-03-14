@@ -9,22 +9,43 @@ description: Full project phase and ticket status report. Scans all ticket files
 
 - `[Project]` — Project name (must match an entry in `.claude/ProjectEnvironment.md`)
 
+## Ground Truth Rule (CRITICAL — anti-hallucination)
+
+**Every data point in this report MUST come from reading an actual file on disk using the Read tool or Glob tool.**
+
+- Do NOT use ticket information from conversation context, prior messages, or memory.
+- Do NOT assume a ticket exists because it was discussed — verify by reading the file.
+- Do NOT fill in status, title, or team from what you "remember" — read the file.
+- If a ticket file does not exist on disk, it does NOT appear in the report.
+- If a Phase folder is empty or does not exist, report it as empty — do not fabricate tickets.
+
+**Violation of this rule produces a false status report — a critical failure.**
+
+---
+
 ## Steps
 
-1. **Read ProjectEnvironment.md:**
+1. **Read ProjectEnvironment.md** (using Read tool):
    - Path: `.claude/ProjectEnvironment.md`
    - Extract `PROJECT_ROOT` for the specified project.
+   - If project not found: report error and stop.
 
-2. **Locate the Implementation Logs folder:**
+2. **List Phase folders** (using Glob or Bash `ls`):
    - Path: `[PROJECT_ROOT]/Development/01_Implementation Logs/INDEV v1.0.0/`
-   - List all Phase folders found.
+   - List all `Phase *` folders found.
+   - If no folders exist: report "No phases found" and stop.
 
-3. **For each Phase folder:**
-   - List all ticket files (any `.md` file that is not a Briefing).
-   - Read each ticket file and extract: ticket ID, title, and status (`[ ]` / `[~]` / `[x]` / `[!]` / `[>]`).
-   - Identify the owning team from the ticket ID prefix (MON = Monolith, SYN = Syndicate, ARC = Arcade, OVR = Overseer).
+3. **For each Phase folder — scan ticket files from disk:**
+   - Use Glob to list all `.md` files in the Phase folder and its team subfolders.
+   - Exclude Briefing files (files matching `*_Briefing.md`).
+   - **For each ticket file found:** use the Read tool to open it and extract:
+     - Ticket ID (from filename or `# [ID]` header)
+     - Title (from `# [ID] — [Title]` header)
+     - Status (search for `**Status:**` line — extract `[ ]` / `[~]` / `[x]` / `[!]` / `[>]`)
+   - Identify owning team from ticket ID prefix (MON = Monolith, SYN = Syndicate, ARC = Arcade, OVR = Overseer).
+   - **If a ticket file cannot be parsed:** include it in the report with status "UNKNOWN — file could not be parsed" rather than guessing.
 
-4. **Build the status report:**
+4. **Build the status report** (using ONLY data extracted from files in Step 3):
 
 ```markdown
 ## Phase Status Report — [Project]

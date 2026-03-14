@@ -55,7 +55,7 @@ Run any command to get started.
 
 2. Scan `.claude/` structure and count:
    - CLAUDE.md present: YES/NO
-   - Policy files in `TeamDocument/1. Policies/` (count `*.md`)
+   - Policy files in `policies/` (count `*.md`)
    - Agent files in `agents/` (count `*.md`)
    - Skill folders in `skills/` (count subfolders containing `SKILL.md`)
    - ProjectEnvironment.md present: YES/NO
@@ -376,7 +376,7 @@ Clean up `.claude/.merge-preview/` directory after successful apply.
 
 - **SHA-256 computation:** `sha256sum "<absolute-path>"` — extract first 64 hex characters.
 - **Remote URL pattern:** `https://raw.githubusercontent.com/VarakornUnicornTech/roundtable-framework/main/<path>` (spaces → `%20`).
-- **Never track:** `RoundTable/` logs, `TeamDocument/2. TeamChat/`, `ProjectEnvironment.md`, `CHANGELOG.md`.
+- **Never track:** `RoundTable/` logs, `team_chat/`, `ProjectEnvironment.md`, `CHANGELOG.md`.
 - **Backup location:** `.claude/.backups/` — versioned directories with manifest.
 - **Merge preview location:** `.claude/.merge-preview/` — temporary, cleaned up after apply.
 - **This skill ships with the framework** — consumers use it to pull future upstream updates safely.

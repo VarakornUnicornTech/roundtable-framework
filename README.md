@@ -185,9 +185,8 @@ your-project/
 │   │   │   └── checklists/      # Critical, informational, suppressions
 │   │   ├── audit/               # Multi-domain gap bug finder
 │   │   └── ...
-│   └── TeamDocument/
-│       ├── 1. Policies/         # 9 detailed policy files
-│       └── 2. TeamChat/         # Team communication logs
+│   ├── policies/                # 9 detailed policy files (§1–§9)
+│   └── team_chat/               # Team communication logs + Cipher diagnostics
 ├── hooks/                       # Hook scripts (config in .claude/settings.json)
 │   └── scripts/                 # check-ticket-exists.sh, log-file-change.sh
 ├── .mcp.json                    # Playwright browser automation
@@ -215,7 +214,7 @@ RoundTable is designed to be forked and customized:
 
 - **Rename team members** — edit agent files to match your preferred code names
 - **Add/remove teams** — create new agent files or remove unused ones
-- **Adjust policies** — modify policy files in `TeamDocument/1. Policies/`
+- **Adjust policies** — modify policy files in `policies/`
 - **Add skills** — create new `.claude/skills/[name]/SKILL.md` files
 - **Tune rules** — edit `.claude/rules/` files to adjust enforcement level
 - **Change authority naming** — replace "Commander" with your preferred title

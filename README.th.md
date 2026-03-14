@@ -87,13 +87,11 @@ Install the RoundTable Framework from https://github.com/VarakornUnicornTech/rou
 ├── CLAUDE.md                    # ไฟล์นโยบายหลัก (จุดเริ่มต้น)
 ├── ProjectEnvironment.md        # ทะเบียนโปรเจค
 ├── settings.json                # การตั้งค่า Claude Code
-├── TeamDocument/
-│   ├── 1. Policies/            # ไฟล์นโยบาย 8 ฉบับ
-│   ├── 2. Team Roster/         # นิยามทีม 6 ทีม
-│   ├── 3. Team Chat/           # บันทึกการสื่อสารระหว่างทีม
-│   ├── Diagnostic Log/         # บันทึกงานของ Cipher
-└── skills/                     # Slash command ที่กำหนดเอง
-```
+├── policies/                    # ไฟล์นโยบาย 9 ฉบับ (§1–§9)
+├── team_chat/                   # บันทึกการสื่อสารระหว่างทีม + Cipher
+├── agents/                      # นิยามทีม 5 ทีม
+├── rules/                       # 7 ไฟล์กฎตามเส้นทาง
+└── skills/                      # Slash command ที่กำหนดเอง
 
 ## ทีม
 

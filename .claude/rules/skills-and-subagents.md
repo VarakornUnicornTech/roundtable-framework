@@ -3,7 +3,7 @@ description: "Skills (slash commands) and subagent standard: pre-flight checks, 
 ---
 
 # Skills & Subagents Rules
-> Full standard: `TeamDocument/1. Policies/08_Skills_and_Subagents.md`
+> Full standard: `policies/08_Skills_and_Subagents.md`
 
 ## Skills (Slash Commands)
 Skills are reusable prompt templates in `.claude/skills/[name]/SKILL.md`.
@@ -19,10 +19,20 @@ Invoked with `/command-name [arguments]`.
 ```
 
 ### Skill Rules
-- Skills describe **procedures** — not policy. Policy lives in `TeamDocument/1. Policies/`.
+- Skills describe **procedures** — not policy. Policy lives in `policies/`.
 - Every skill reads `.claude/ProjectEnvironment.md` for paths — never hardcode paths.
 - Skills that create files determine next ORDER number by scanning target folder first.
 - Skills must log to appropriate file (RoundTable for Overseer, Team Chat for sub-teams).
+
+### Ground Truth Rule (MANDATORY — all skills)
+When a skill reads project files (tickets, briefings, configs, source code) to extract
+data, it MUST use the Read tool or Glob tool to open the actual file from disk.
+Never use information from conversation context, prior messages, or AI memory as a
+substitute for reading the file. The file on disk is the single source of truth.
+- Do NOT report a ticket's status from memory — open the file and read the `**Status:**` line.
+- Do NOT list tickets based on planning discussions — list only files found on disk via Glob.
+- If a file does not exist on disk, report it as missing — never fabricate contents.
+- Violation = false report = critical failure equivalent to Silent Failure.
 - Skills never skip Planning-First Workflow — plan files still presented to Commander before implementing.
 
 ---
