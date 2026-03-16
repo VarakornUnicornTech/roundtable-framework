@@ -293,6 +293,9 @@ Skills are prompt templates in `.claude/skills/` invoked with `/command-name`. S
 | `/bug-report [Project] [desc]` | Create PLANNED bug fix file + ticket folders |
 | `/mod-log [Project] [name]` | Create PLANNED modification log + ticket folders |
 | `/sub-feature [Project] [name]` | Create PLANNED sub-feature + ticket folders |
+| `/plan [Project] [description]` | Unified planning — brainstorm → design → spec → tickets. Awaits Commander approval before implementation. |
+| `/document [Project] [FeatureName]` | Generate or update a feature description doc from source code (L1/L2 scan, living doc) |
+| `/commands [list\|recommend]` | Command discovery — list all commands or recommend best command for your intent |
 | `/overseer-report [ID]` | File a report entry for AM review |
 | `/git status` | Quick git state overview — branch, divergence, working tree |
 | `/git commit [branch?]` | Governed commit — safety gates, 2-pass review, ticket gate, commit |
