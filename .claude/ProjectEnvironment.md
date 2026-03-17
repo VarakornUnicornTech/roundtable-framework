@@ -19,9 +19,18 @@
 ### HubVSCode
 **PROJECT_MODE:** Decentralized
 **PROJECT_ROOT:** `C:/UnicornVibeCode/UniOpsQC/Development/HubVSCode`
-**SOURCE_ROOT:** `C:/UnicornVibeCode/roundtable-hub-vscode`
+**SOURCE_ROOT:** `C:/UnicornVibeCode/UniOpsQC-vscode`
 **ACTIVE:** true
-**Notes:** UniOpsQC Hub VSCode Extension (TypeScript, esbuild, v1.6.0). Publisher: UnicornTech. Planning hub in UniOpsQC/Development/HubVSCode — source code in separate repo (GitHub: UniOpsQC-vscode, local folder: roundtable-hub-vscode). Issues tracked in UniOpsQC repo (#50–55). Open bugs: SESSION LOGS filename mismatch, FRAMEWORK STATUS vunknown, Update Preview clipboard bug, Set project name dialog repeat.
+**Notes:** UniOpsQC Hub VSCode Extension (TypeScript, esbuild, v1.6.1). Publisher: UnicornTech. Planning hub in UniOpsQC/Development/HubVSCode — source code in separate repo (GitHub: UniOpsQC-vscode, local folder: UniOpsQC-vscode). All BUG-01–06 fixed and shipped to Marketplace v1.6.1.
+
+---
+
+### UniOpsQC-command
+**PROJECT_MODE:** Decentralized
+**PROJECT_ROOT:** `C:/UnicornVibeCode/UniOpsQC/Development/UniOpsQC-command`
+**SOURCE_ROOT:** `C:/UnicornVibeCode/UniOpsQC-command`
+**ACTIVE:** true
+**Notes:** UniOpsQC Command — PM Dashboard web app for AI Agent workflows (.NET solution, PostgreSQL, SignalR). Full-stack: Hub.Domain / Hub.Application / Hub.Infrastructure / Hub.Api / Hub.Client. Source at GitHub: VarakornUnicornTech/UniOpsQC-command (renamed from RoundTable-Hub). Planning hub in UniOpsQC/Development/UniOpsQC-command.
 
 ---
 
@@ -35,4 +44,4 @@
 
 ---
 
-*Last updated: 17-03-2026 by AM (AstonMartin)*
+*Last updated: 17-03-2026 by AM (AstonMartin) — RoundTableHub renamed to UniOpsQC-command (Session 18)*
