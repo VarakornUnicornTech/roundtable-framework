@@ -76,14 +76,14 @@ log the trade-off explicitly. Discipline over convenience.
 Sub-teams log in TeamChat, NOT RoundTable. Only Overseer writes to RoundTable.
 
 ### Team Chat Daily Log Standard
-- Location: `TeamDocument/2. TeamChat/[N. TeamName]/DD-MM-YYYY_[TeamName].md`
+- Location: `team_chat/[N. TeamName]/DD-MM-YYYY_[TeamName].md`
 - File created at session start — one file per team per day
 - Mandatory structure: Conductor speaks first, then role-labeled entries
 - Sub-team persona rules, role labels, and speaking order cascade from RoundTable rules
 - OverseerReport filing trigger: when any ticket reaches Complete or BLOCKED status
 
 ### OverseerReport
-- Location: `TeamDocument/2. TeamChat/4. OverseerReport/DD-MM-YYYY_OverseerReport.md`
+- Location: `team_chat/5. OverseerReport/DD-MM-YYYY_OverseerReport.md`
 - Entry format:
 ```
 ## [TeamName]

@@ -1,6 +1,6 @@
 # §1 — Logging Requirements & RoundTable Standards
 
-> **Policy reference file.** Loaded on-demand from `.claude/TeamDocument/1. Policies/`. Core rules live in CLAUDE.md.
+> **Policy reference file.** Loaded on-demand from `.claude/policies/`. Core rules live in CLAUDE.md.
 
 ---
 
@@ -103,7 +103,7 @@ This block is the ground truth record. It exists so that any reader opening the 
 - After Commander's decision is final, the team executes without further debate
 
 **Team Chat (All other teams):**
-- Teams **Monolith**, **Syndicate**, and **Arcade** log their discussions in `.claude/TeamDocument/2. TeamChat`
+- Teams **Monolith**, **Syndicate**, and **Arcade** log their discussions in `.claude/team_chat/`
 - These teams must **NOT** write directly to the RoundTable file
 - Team Conductors file summaries/handoffs in Team Chat for AM to review and incorporate into RoundTable
 

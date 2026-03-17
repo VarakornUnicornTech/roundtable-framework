@@ -1,6 +1,6 @@
 # §8 — Skills (Slash Commands) & Subagent Standard
 
-> **Policy reference file.** Loaded on-demand from `.claude/TeamDocument/1. Policies/`. Core rules live in CLAUDE.md.
+> **Policy reference file.** Loaded on-demand from `.claude/policies/`. Core rules live in CLAUDE.md.
 
 ---
 
@@ -31,11 +31,24 @@ Skills are reusable prompt templates stored in `.claude/skills/[name]/SKILL.md`.
 ```
 
 ### Rules
-- Skill files describe **procedures** — not policy. Policy lives in `.claude/TeamDocument/1. Policies/`. Skills call on policy as context.
+- Skill files describe **procedures** — not policy. Policy lives in `.claude/policies/`. Skills call on policy as context.
 - Every skill must read `.claude/ProjectEnvironment.md` whenever it needs a project path — never hardcode paths.
 - Skills that create files must determine the next ORDER number by scanning the target folder before writing.
 - Skills must log to the appropriate file (RoundTable for Overseer, Team Chat for sub-teams) as part of their execution.
 - Skills never skip the Planning-First Workflow — skills that create plan files still present to Commander ท่านผู้บัญชาการ before implementing anything.
+
+### Ground Truth Rule (MANDATORY — all skills)
+**When a skill reads project files (tickets, briefings, configs, source code) to extract data, it MUST use the Read tool or Glob tool to open the actual file from disk.** Never use information from conversation context, prior messages, or AI memory as a substitute for reading the file.
+
+This rule exists because the AI may have discussed tickets, briefings, or file contents earlier in the conversation. That context may be outdated, incomplete, or refer to files that were never actually created. The file on disk is the single source of truth.
+
+Specific prohibitions:
+- Do NOT report a ticket's status from memory — open the ticket file and read the `**Status:**` line.
+- Do NOT list tickets that "should exist" based on planning discussions — list only tickets found on disk via Glob.
+- Do NOT fill in briefing details from conversation — read the briefing file.
+- If a file does not exist on disk, it does not exist. Report it as missing rather than fabricating its contents.
+
+**Violation produces false reports — a critical failure equivalent to Silent Failure.**
 
 ---
 
@@ -132,7 +145,7 @@ Roster: .claude/agents/[team].md
 Briefing: [PROJECT_ROOT]/Development/[ProjectName]/01_Implementation Logs/INDEV v1.0.0/Phase [N]/[TeamName]_Phase[N]_Briefing.md
 Your ticket scope: [specific ticket IDs]
 Commander direction: [Commander's input from Vision Gate, or "None — execute per briefing"]
-When complete: write your Team Chat session entry to .claude/TeamDocument/2. TeamChat/[N. TeamName]/[DD-MM-YYYY]_[TeamName].md, then return a compact summary of: (1) what you built, (2) files created/modified, (3) any blockers.
+When complete: write your Team Chat session entry to .claude/team_chat/[N. TeamName]/[DD-MM-YYYY]_[TeamName].md, then return a compact summary of: (1) what you built, (2) files created/modified, (3) any blockers.
 Do NOT advance to Phase [N+1] — auth: [free | hold]
 ```
 

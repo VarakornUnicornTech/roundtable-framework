@@ -43,8 +43,8 @@ Issued by: AM | Date: [TODAY] | Project: [PROJECT_NAME] | Phase: $2 | Tickets: [
 - **Blocked on:** [list blocked tickets and what unblocks them]
 
 ## 5. Logging & Handoff Requirements
-- Team Chat log: `.claude/Team Chat/[N]. $1/DD-MM-YYYY_$1.md`
-- OverseerReport: `.claude/Team Chat/4. OverseerReport/DD-MM-YYYY_OverseerReport.md`
+- Team Chat log: `.claude/team_chat/[N]. $1/DD-MM-YYYY_$1.md`
+- OverseerReport: `.claude/team_chat/5. OverseerReport/DD-MM-YYYY_OverseerReport.md`
 - File Dependency Signal in OverseerReport when a ticket others depend on completes
 
 ## 6. Boundaries — Do NOT Touch

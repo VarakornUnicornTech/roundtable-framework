@@ -1,6 +1,6 @@
 # §3 — Team Chat, OverseerReport & HandOver Standards
 
-> **Policy reference file.** Loaded on-demand from `.claude/TeamDocument/1. Policies/`. Core rules live in CLAUDE.md.
+> **Policy reference file.** Loaded on-demand from `.claude/policies/`. Core rules live in CLAUDE.md.
 
 ---
 
@@ -10,11 +10,11 @@
 
 Each team has a **daily log file** (like RoundTable) in their team-specific subfolder:
 
-**Location:** `.claude/TeamDocument/2. TeamChat/[N]. [TeamName]/`
+**Location:** `.claude/team_chat/[N]. [TeamName]/`
 
 **Directory Structure:**
 ```
-TeamDocument/2. TeamChat/
+team_chat/
 ├── 1. Monolith/
 │   ├── DD-MM-YYYY_Monolith.md         # Daily team log (like RoundTable)
 │   └── HandOver/                      # Cross-team handoffs (non-Overseer)
@@ -27,7 +27,9 @@ TeamDocument/2. TeamChat/
 │   ├── DD-MM-YYYY_Arcade.md
 │   └── HandOver/
 │       └── [NUMBER]. [REFER_TEAM_NAME]_[WORK_TITLE]_DD-MM-YYYY.md
-└── 4. OverseerReport/                 # Shared daily roundtable for sub-team → Overseer reports
+├── 4. Cipher/                        # Cipher diagnostic logs
+│   └── [NUMBER]. [TASK]_DD_MM_YYYY.md
+└── 5. OverseerReport/                 # Shared daily roundtable for sub-team → Overseer reports
     └── DD-MM-YYYY_OverseerReport.md
 ```
 
@@ -47,7 +49,7 @@ TeamDocument/2. TeamChat/
 
 ### Handoff Process
 
-**Handoffs TO Overseer** go in `TeamDocument/2. TeamChat/4. OverseerReport/`:
+**Handoffs TO Overseer** go in `team_chat/5. OverseerReport/`:
 
 **OverseerReport File Format:** `DD-MM-YYYY_OverseerReport.md`
 
@@ -80,7 +82,7 @@ TeamDocument/2. TeamChat/
 A **Team Chat daily log** is the internal discussion record for one team on one day. All sessions and tasks that day go into a single file.
 
 **File naming:** `DD-MM-YYYY_[TeamName].md`
-**Location:** `TeamDocument/2. TeamChat/[TeamName]/DD-MM-YYYY_[TeamName].md`
+**Location:** `team_chat/[TeamName]/DD-MM-YYYY_[TeamName].md`
 
 **Mandatory structure:**
 
@@ -123,7 +125,7 @@ A **Team Chat daily log** is the internal discussion record for one team on one 
 The **OverseerReport** is the shared daily file where all sub-teams file their completed ticket reports and blockers for AM to review.
 
 **File naming:** `DD-MM-YYYY_OverseerReport.md`
-**Location:** `TeamDocument/2. TeamChat/OverseerReport/DD-MM-YYYY_OverseerReport.md`
+**Location:** `team_chat/OverseerReport/DD-MM-YYYY_OverseerReport.md`
 **Rule:** Append to the existing daily file — do not create a new file per report.
 
 **Each report entry format:**
@@ -164,7 +166,7 @@ None | [Description of blocker — what is needed to unblock]
 A **HandOver** is a cross-team work transfer document filed by the originating team in their own `HandOver/` folder.
 
 **File naming:** `[NUMBER]. [RECEIVING_TEAM]_[WorkTitle]_DD-MM-YYYY.md`
-**Location:** `TeamDocument/2. TeamChat/[OriginatingTeam]/HandOver/`
+**Location:** `team_chat/[OriginatingTeam]/HandOver/`
 Examples:
 - `Monolith/HandOver/01. Syndicate_UIDSchemaHandoff_28-02-2026.md`
 - `Arcade/HandOver/01. Monolith_AssetList_28-02-2026.md`
