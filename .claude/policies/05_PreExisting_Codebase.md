@@ -1,4 +1,4 @@
-# §7 — Pre-Existing Codebase Standards
+# §5 — Pre-Existing Codebase Standards
 
 > **Policy reference file.** Loaded on-demand from `.claude/policies/`. Core rules live in CLAUDE.md.
 
@@ -6,7 +6,7 @@
 
 ---
 
-## 7a. Tiered Scan Protocol (MANDATORY — Global)
+## 5a. Tiered Scan Protocol (MANDATORY — Global)
 
 **Trigger:** `Development/[ProjectName]/PreExisting TechStack/[ProjectName].md` MUST be initialized at the **start of any Discovery or Scan session** — before any implementation, before any modification, before any ticket is opened. The document is NOT deferred until "first touch". First contact with the codebase IS the trigger.
 
@@ -98,7 +98,7 @@
 
 ---
 
-## 7b. L3 Completeness Verification Protocol (MANDATORY — every L3 scan)
+## 5b. L3 Completeness Verification Protocol (MANDATORY — every L3 scan)
 
 **Applies to:** Every team, every L3 scan, every project — no exceptions.
 
@@ -479,4 +479,4 @@ All six sub-audits produce their respective registries/tables as mandatory secti
 
 ---
 
-*Extracted from CLAUDE.md §7 — 11-03-2026*
+*Updated: 13-03-2026*

@@ -29,7 +29,7 @@ case "$FILE_PATH" in
   *.md|*.json|*.yml|*.yaml|*.txt|*.gitkeep|*.gitignore)
     exit 0
     ;;
-  *Development/*|*RoundTable/*|*TeamChat/*|*TeamDocument/*|*.claude/*)
+  *Development/*|*RoundTable/*|*team_chat/*|*.claude/*)
     exit 0
     ;;
 esac

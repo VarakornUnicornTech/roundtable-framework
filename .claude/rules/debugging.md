@@ -10,7 +10,7 @@ paths:
 ---
 
 # Debugging Rules
-> Full standard: `TeamDocument/1. Policies/06_Debugging_Protocol.md`
+> Full standard: `policies/06_Debugging_Protocol.md`
 
 ## Instrument-First Rule (NON-NEGOTIABLE)
 Never attempt a fix before you can see the system. Add observability first.

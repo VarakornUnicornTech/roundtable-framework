@@ -8,7 +8,8 @@ RoundTable Framework version management. Check for updates, preview upgrade bene
 
 | Action | Options | Description |
 |--------|---------|-------------|
-| *(none)* or `version` | — | Quick local version + component count |
+| *(none)* or `help` | — | Show all available commands |
+| `version` | — | Quick local version + component count |
 | `check update` | — | Compare local vs remote, warn if update available |
 | `preview` | — | Upgrade impact analysis: benefits, risks, recommendation |
 | `changelog [version]` | optional version string | Display changelog, optionally filtered |
@@ -17,7 +18,30 @@ RoundTable Framework version management. Check for updates, preview upgrade bene
 
 ## Dispatch
 
-Parse `$ARGUMENTS`. The first word (or first two words for `check update`) is the action. Default to `version` if empty. Route to the relevant section below.
+Parse `$ARGUMENTS`. The first word (or first two words for `check update`) is the action. Default to `help` if empty. Route to the relevant section below.
+
+---
+
+## ACTION: help
+
+**Goal:** Quick reference of all available commands. No computation, no fetch.
+
+Present:
+
+```markdown
+## RoundTable Framework — Template Commands
+
+| Command | What it does |
+|---------|-------------|
+| `/template version` | Your installed version + component count |
+| `/template check update` | Check if a newer version is available |
+| `/template preview` | Benefits, risks, and upgrade recommendation |
+| `/template changelog` | View what changed in each version |
+| `/template apply` | Upgrade with backup + AI Smart Merge |
+| `/template rollback` | Restore a previous version |
+
+Run any command to get started.
+```
 
 ---
 
@@ -31,7 +55,7 @@ Parse `$ARGUMENTS`. The first word (or first two words for `check update`) is th
 
 2. Scan `.claude/` structure and count:
    - CLAUDE.md present: YES/NO
-   - Policy files in `TeamDocument/1. Policies/` (count `*.md`)
+   - Policy files in `policies/` (count `*.md`)
    - Agent files in `agents/` (count `*.md`)
    - Skill folders in `skills/` (count subfolders containing `SKILL.md`)
    - ProjectEnvironment.md present: YES/NO
@@ -62,7 +86,7 @@ No hash computation. No remote fetch. This must be fast.
    - If missing: "No template-version.json found — cannot determine current version."
 
 2. Fetch remote `template-version.json`:
-   `https://raw.githubusercontent.com/VarakornUnicornTech/roundtable-framework/main/template-version.json`
+   `https://raw.githubusercontent.com/VarakornUnicornTech/UniOpsQC/main/template-version.json`
    - If fetch fails: "Could not reach remote repository."
 
 3. Compare versions (semantic versioning):
@@ -351,8 +375,8 @@ Clean up `.claude/.merge-preview/` directory after successful apply.
 ## Notes
 
 - **SHA-256 computation:** `sha256sum "<absolute-path>"` — extract first 64 hex characters.
-- **Remote URL pattern:** `https://raw.githubusercontent.com/VarakornUnicornTech/roundtable-framework/main/<path>` (spaces → `%20`).
-- **Never track:** `RoundTable/` logs, `TeamDocument/2. TeamChat/`, `ProjectEnvironment.md`, `CHANGELOG.md`.
+- **Remote URL pattern:** `https://raw.githubusercontent.com/VarakornUnicornTech/UniOpsQC/main/<path>` (spaces → `%20`).
+- **Never track:** `RoundTable/` logs, `team_chat/`, `ProjectEnvironment.md`, `CHANGELOG.md`.
 - **Backup location:** `.claude/.backups/` — versioned directories with manifest.
 - **Merge preview location:** `.claude/.merge-preview/` — temporary, cleaned up after apply.
 - **This skill ships with the framework** — consumers use it to pull future upstream updates safely.

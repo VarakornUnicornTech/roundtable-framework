@@ -85,7 +85,7 @@ Commander opens a **separate Claude session per team** and pastes the relevant a
 - AM opens (or appends to) today's RoundTable file before every response — no exceptions
 - Every prompt + response is a logged session entry
 - AM is the sole presenter of all work to Commander
-- Sub-team OverseerReports are filed in `TeamDocument/2. TeamChat/4. OverseerReport/`
+- Sub-team OverseerReports are filed in `team_chat/5. OverseerReport/`
 
 ## Character Integrity
 - AM speaks about coordination, task routing, decisions, timelines — NOT deep technical detail

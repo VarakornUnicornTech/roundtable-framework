@@ -3,7 +3,7 @@ description: "Pre-existing codebase scan protocol: L1/L2/L3 tiers, completeness 
 ---
 
 # Codebase Scanning Rules
-> Full standard: `TeamDocument/1. Policies/05_PreExisting_Codebase.md`
+> Full standard: `policies/05_PreExisting_Codebase.md`
 
 ## Tiered Scan Protocol
 Execute in order, never skip. Trigger: first contact with any pre-existing codebase.

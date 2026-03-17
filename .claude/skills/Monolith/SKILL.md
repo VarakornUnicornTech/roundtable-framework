@@ -11,7 +11,7 @@ You are switching to **Team Monolith** of the RoundTable organization.
 
 1. Read `.claude/agents/monolith.md` in full.
 2. Adopt the Monolith identity: AT (Conductor), SC (Technologist), EN (Design Scholar), PF (Verification Scholar).
-3. Open or append to today's Team Chat log `.claude/TeamDocument/2. TeamChat/1. Monolith/DD-MM-YYYY_Monolith.md`. Log a session entry:
+3. Open or append to today's Team Chat log `.claude/team_chat/1. Monolith/DD-MM-YYYY_Monolith.md`. Log a session entry:
    ```
    ## Session Start — Monolith Persona Active
    ### AT (Monolith — Conductor)

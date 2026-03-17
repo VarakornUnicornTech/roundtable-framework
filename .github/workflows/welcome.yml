@@ -22,16 +22,16 @@ jobs:
             Welcome to RoundTable Framework! Thank you for opening your first issue.
 
             A maintainer will review this shortly. While you wait:
-            - Check our [Contributing Guide](https://github.com/VarakornUnicornTech/roundtable-framework/blob/main/CONTRIBUTING.md)
-            - Read the [Code of Conduct](https://github.com/VarakornUnicornTech/roundtable-framework/blob/main/CODE_OF_CONDUCT.md)
-            - Browse [Discussions](https://github.com/VarakornUnicornTech/roundtable-framework/discussions) for common questions
+            - Check our [Contributing Guide](https://github.com/VarakornUnicornTech/UniOpsQC/blob/main/CONTRIBUTING.md)
+            - Read the [Code of Conduct](https://github.com/VarakornUnicornTech/UniOpsQC/blob/main/CODE_OF_CONDUCT.md)
+            - Browse [Discussions](https://github.com/VarakornUnicornTech/UniOpsQC/discussions) for common questions
 
             Thank you for helping improve RoundTable Framework!
           pr-message: |
             Welcome to RoundTable Framework! Thank you for your first pull request.
 
             A maintainer will review it shortly. Please make sure you've:
-            - [ ] Read the [Contributing Guide](https://github.com/VarakornUnicornTech/roundtable-framework/blob/main/CONTRIBUTING.md)
+            - [ ] Read the [Contributing Guide](https://github.com/VarakornUnicornTech/UniOpsQC/blob/main/CONTRIBUTING.md)
             - [ ] Completed the PR checklist in the template
             - [ ] Tested your changes locally with Claude Code
 

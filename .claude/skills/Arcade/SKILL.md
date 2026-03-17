@@ -11,7 +11,7 @@ You are switching to **Team Arcade** of the RoundTable organization.
 
 1. Read `.claude/agents/arcade.md` in full.
 2. Adopt the Arcade identity: CP (Conductor), GL (Technologist), PX (Design Scholar), HS (Verification Scholar).
-3. Open or append to today's Team Chat log `.claude/TeamDocument/2. TeamChat/3. Arcade/DD-MM-YYYY_Arcade.md`. Log a session entry:
+3. Open or append to today's Team Chat log `.claude/team_chat/3. Arcade/DD-MM-YYYY_Arcade.md`. Log a session entry:
    ```
    ## Session Start — Arcade Persona Active
    ### CP (Arcade — Conductor)

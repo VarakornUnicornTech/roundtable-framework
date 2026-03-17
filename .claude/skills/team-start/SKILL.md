@@ -21,8 +21,9 @@ description: Formal team kickoff. Logs session start, reads Phase Briefing, runs
 2. **Read agent file:**
    - Read `.claude/agents/[team].md` and adopt team voice.
 
-3. **Read Phase Briefing Mail:**
+3. **Read Phase Briefing Mail** (using Read tool — from disk, not context):
    - Path: `Development/01_Implementation Logs/INDEV v1.0.0/Phase [N]/[Team]_Phase[N]_Briefing.md`
+   - **Use the Read tool to open the actual file.** Do NOT rely on briefing content from conversation context or memory — the file on disk is the single source of truth.
    - If not found: report `[BLOCKED] Phase Briefing Mail missing for [Team] Phase [N]. Cannot proceed.`
 
 4. **Run ZCB check (AM only — sub-teams skip):**

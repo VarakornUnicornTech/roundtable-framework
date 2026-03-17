@@ -1,6 +1,6 @@
 # §4 — Development Structure, Project Organization & Planning Workflow
 
-> **Policy reference file.** Loaded on-demand from `.claude/TeamDocument/1. Policies/`. Core rules live in CLAUDE.md.
+> **Policy reference file.** Loaded on-demand from `.claude/policies/`. Core rules live in CLAUDE.md.
 
 ---
 
@@ -28,10 +28,10 @@
 │   │   ├── 3. Arcade/
 │   │   │   ├── DD-MM-YYYY_Arcade.md
 │   │   │   └── HandOver/
-│   │   └── 4. OverseerReport/
+│   │   ├── 4. Cipher/                  # Cipher diagnostic logs
+│   │   │   └── [NUMBER]. [TASK]_DD_MM_YYYY.md
+│   │   └── 5. OverseerReport/
 │   │       └── DD-MM-YYYY_OverseerReport.md
-│   ├── Diagnostic Log/                  # Cipher engagement records
-│   │   └── [NUMBER]. [TASK]_DD_MM_YYYY.md
 │   ├── skills/                          # Custom slash commands
 │   ├── agents/                          # Team subagent definitions
 │   └── settings.json                    # Permissions and hooks

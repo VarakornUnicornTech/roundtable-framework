@@ -3,7 +3,7 @@ description: "Parallel execution policy: ZCB guarantee, ticket ownership, multi-
 ---
 
 # Parallel Execution Rules
-> Full standard: `TeamDocument/1. Policies/07_Parallel_Execution.md` + `09_Multi_Session_Parallel_Work.md`
+> Full standard: `policies/07_Parallel_Execution.md` + `09_Multi_Session_Parallel_Work.md`
 
 ## All Teams Work in Parallel
 All sub-teams work in parallel across every phase. No team waits for another
