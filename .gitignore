@@ -20,6 +20,9 @@ Claude Projects/
 # Claude Code memory (private per-user)
 memory/
 
+# Sync secrets (local only -- never commit)
+secrets.local
+
 # Backup files from /template-apply
 *.backup
 template-version.backup.json
